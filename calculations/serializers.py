@@ -28,7 +28,7 @@ class NewCalculationSerializer(serializers.ModelSerializer):
     class Meta:
         model = CalculationNew
         fields = '__all__'
-        read_only_fields = ['odpremium','odMinusNCB','netPremium','tpPremium','totalPremium','netPremiumAmount','poAmount','payableAmount','created_at']
+        read_only_fields = ['odpremium','odMinusNCB','netPremium','tpPremium','totalPremium','netPremiumAmount','poAmount','payableAmount','created_at','policyType']
 
     def create(self, validated_data):
         # data = serializer.validated_data
