@@ -41,8 +41,10 @@ class NewCalculationSerializer(serializers.ModelSerializer):
         legalLiability = validated_data.get('legalLiability', 0)
         po = validated_data.get('po', 0)
         company = validated_data.get('company',None)
+        policyType = validated_data.get('policyType',None)
 
         print('fffffffffffffffffffffffffffffffff',company)
+        print('policyType',policyType)
 
         # rateValue = rate / 100
 
@@ -81,6 +83,9 @@ class NewCalculationSerializer(serializers.ModelSerializer):
         validated_data['totalPremium'] = totalPremium
         validated_data['poAmount'] = poAmount
         validated_data['payableAmount'] = payableAmount
+        validated_data['policyType'] = policyType
+
+        
         print("validated_data after update", validated_data['payableAmount'])
         # validated_data.update(final_result)
 
